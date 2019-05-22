@@ -1,0 +1,327 @@
+$mainColor: #20a0ff; // button-info 颜色
+.el-table th {
+  background: #eff4f8
+}
+
+.el-button + .el-button {
+  margin-left: 0px;
+}
+
+.el-pagination button, .el-pagination span {
+  cursor: pointer;
+}
+
+.el-pagination {
+  margin-top: 5px;
+}
+
+// 修改 element 的一些默认样式
+.main {
+  .el-tabs--border-card {
+    .el-tabs__header {
+      border-bottom: 2px solid $mainColor;
+      .el-tabs__item {
+        &.is-active {
+          background: $mainColor;
+          color: #fff;
+        }
+      }
+    }
+    .el-tabs__content {
+      padding: 15px 0;
+      .el-tree {
+        margin-top: 15px;
+      }
+      .tab-pane-top {
+        .el-input {
+          input {
+            border-radius: 0;
+          }
+        }
+        .el-button--primary {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+// button
+//.el-button{
+//  height: 36px;
+//}
+.el-button--primary {
+  color: #fff;
+  background-color: #3d8cff;
+  border-color: #3d8cff;
+}
+
+.el-button--success {
+  color: #fff;
+  background-color: #43b559;
+  border-color: #43b559;
+}
+
+.el-button--success {
+  color: #fff;
+  background-color: #43b559;
+  border-color: #43b559;
+}
+
+.el-button + .el-button {
+  margin-left: 5px;
+}
+
+// table
+.el-table--border {
+  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  min-height: 388px;
+  max-height: 388px;
+  &::-webkit-scrollbar{
+    width: 0;
+  }
+}
+
+.el-table::before {
+  height: 0;
+}
+
+.el-table--border::after {
+  width: 0;
+}
+
+$table_edit: "/assets/image/table_edit.png";
+$table_delete: "/assets/image/table_delete.png";
+.table_edit {
+  width: 50%;
+  height: 18px;
+  float: left;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  // 伪类
+  &:before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    width: 1px;
+    height: 100%;
+    transform-origin: 0 0;
+    background: #e9e9e9;
+    background-size: cover;
+  }
+  .table_edit_icon {
+    height: 100%;
+    width: 16px;
+    line-height: 18px;
+    display: inline-block;
+    background: url($table_edit) no-repeat;
+  }
+}
+
+// pagination
+.pagination_wrapper {
+  float: right;
+  margin: 10px 20px 10px 0;
+  $border: #c7ced8;
+  .el-pagination {
+    .btn-next,
+    .btn-prev,
+    .el-pager li {
+      margin: 0;
+      background: #fff;
+      border-radius: 0;
+      width: 32px;
+      padding: 0;
+    }
+    .btn-next {
+      border: 1px solid $border;
+      border-left: none;
+      height: 32px;
+    }
+    .btn-prev {
+      border: 1px solid $border;
+      border-right: none;
+      height: 32px;
+    }
+    .el-pager {
+      border: 1px solid $border;
+      height: 32px;
+    }
+    .el-pager li {
+      border-right: 1px solid $border;
+      height: 30px;
+      line-height: 30px;
+      font-weight: 500;
+      &.active {
+        background: #529bff;
+        color: #fff;
+        border: 1px solid #529bff;
+      }
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+    .el-pagination__jump {
+      height: 32px;
+      line-height: 32px;
+      .el-pagination__editor {
+        border-radius: 0;
+        .el-input__inner {
+          border-radius: 0;
+          border-color: $border;
+        }
+      }
+
+    }
+
+  }
+}
+
+.el-pagination button, .el-pagination span {
+  cursor: pointer;
+}
+
+.table_delete {
+  width: 50%;
+  height: 18px;
+  float: right;
+  text-align: center;
+  cursor: pointer;
+  .table_delete_icon {
+    height: 100%;
+    width: 16px;
+    line-height: 18px;
+    display: inline-block;
+    background: url($table_delete) no-repeat;
+  }
+}
+
+//.el-input__inner {
+//  height: 36px;
+//}
+.el-date-editor.el-input, .el-date-editor.el-input__inner, .el-select {
+  width: 200px;
+}
+
+.el-icon-date, el-input__icon {
+  color: #3d8cff;
+}
+
+.time_to {
+  color: #eee;
+  width: 14px;
+}
+// loading
+.el-alert--warning{
+  height:40px;
+}
+
+// 地图的样式
+#amap {
+  z-index: 9;
+}
+
+// 图片上传回显
+.el-upload-list__item-name {
+  color: #409EFF;
+  cursor: pointer;
+}
+
+// 地块上面显示
+.mapContent {
+  border: solid 1px #000;
+  color: #fff;
+  float: left;
+  background-color: #000;
+  box-shadow: 0 0 10px #000;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px;
+  min-width: 100px;
+}
+
+// 地图上面的关闭按钮
+.amap-info-close {
+  display: none;
+}
+
+.amap-info-content {
+  padding: 0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #495060;
+  &::-webkit-scrollbar{
+    width: 0;
+  }
+  .mapApplyNo {
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #A3c7ff;
+    padding-left: 20px;
+  }
+  .mapTime {
+    font-size: 14px;
+    color: #495060;
+    padding: 15px 15px 15px 28px;
+    .startPlace, .endPlace {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        transform-origin: 0 0;
+        border-radius: 50%;
+        background: #fff;
+        top: 50%;
+        left: -12px;
+        margin-top: -2px;
+        z-index: 9999;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: -14px;
+        width: 8px;
+        height: 8px;
+        transform-origin: 0 0;
+        border-radius: 50%;
+        top: 50%;
+        margin-top: -4px;
+        z-index: 99;
+      }
+    }
+    .startPlace:after {
+      background: #43b559;
+    }
+    .endPlace:after {
+      background: #f78989;
+    }
+    b {
+      font-weight: 500;
+    }
+  }
+}
+
+//
+.toggle_arrow {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 999;
+  background: #fff;
+  color: #409EFF;
+}
+
+.box_shadow {
+  box-shadow: 0 0 10px #000;
+}
+
+
+
